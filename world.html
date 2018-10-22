@@ -1,0 +1,52 @@
+<html>
+  <head>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>  
+	
+	  
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
+  <body onload="">
+    <div id="owner">你的ID：</div>
+	<div id="userlist">其他使用者ID：</div>
+	  
+	  
+	<div id="world">
+		<a-scene background="color: #ECECEC" display: block; embedded>
+			
+			<a-sky src="#sky"></a-sky>
+		  <a-assets>
+			 <a-asset-item id="world-obj" src="world.obj"></a-asset-item>
+			  <a-asset-item id="world-mtl" src="world.mtl"></a-asset-item>
+			  <a-asset-item id="sound-obj" src="/model/file.obj"></a-asset-item>
+			  <a-asset-item id="sound-mtl" src="/model/file.mtl"></a-asset-item>
+  			  <img id="sky" src="sky.jpg">
+			 
+		  </a-assets>		
+			<a-camera id='maincamera' fov="30" ></a-camera>	
+			
+		 	<a-obj-model src="#world-obj" mtl="#world-mtl" ></a-obj-model>
+			
+		 	<a-obj-model position="50 2 0" src="#sound-obj" mtl="#sound-mtl" ></a-obj-model>	 
+			<a-obj-model position="0 2 0" src="#sound-obj" mtl="#sound-mtl" ></a-obj-model>	 
+		  
+		  
+		  <a-plane position="0 0 0" rotation="-90 0 0" width="50" height="50" src="floor.jpg" repeat="20 20" shadow></a-plane>
+		</a-scene>	
+	</div>
+	  
+	  
+	  <div id="videolist">
+	  	<video id="yourVideo" autoplay playsinline></video>
+	  </div>
+	  
+	  
+    <br />
+    <button onclick="loadplayer()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
+	  
+    <button onclick="deb()" type="button" class="btn btn-primary btn-lg">Check</button>
+	<button onclick="remove()" type="button" class="btn btn-primary btn-lg">Remove all users</button>  
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

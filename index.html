@@ -1,13 +1,72 @@
-<!DOCTYPE html>
 <html>
-	<script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js">
-</script>
-   
+  <head>
+ 	
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+	  
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+	  
+	<script src="https://aframe.io/releases/0.8.0/aframe.min.js"></script>
+	      <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+        <script src="https://unpkg.com/aframe-gradient-sky@1.0.4/dist/gradientsky.min.js"></script>
+  		<script src="//cdn.rawgit.com/donmccurdy/aframe-physics-system/v3.2.0/dist/aframe-physics-system.min.js"></script>
+	  
+	  
+  </head>
+  s<body onload="">
+    <div id="owner">你的ID：</div>
+	<div id="userlist">其他使用者ID：</div>
+	  
+	  
+	<div id="world">
+		<a-scene background="color: #ECECEC" display: status block; physics="debug: false" embedded >
+			
+			
+		  <a-assets>
+			  
+		  	  <a-asset-item id="world-obj" src="world.obj"></a-asset-item>
+			  <a-asset-item id="world-mtl" src="world.mtl"></a-asset-item>
+			  <a-asset-item id="sound-obj" src="./model/file.obj"></a-asset-item>
+			  <a-asset-item id="sound-mtl" src="./model/file.mtl"></a-asset-item>
+			  <a-asset-item id="pika-obj" src="./model/pika.obj"></a-asset-item>
+			  <a-asset-item id="pika-mtl" src="./model/pika.mtl"></a-asset-item>
+  			    <a-asset-item id="city" src="./littlest_tokyo/scene.gltf"></a-asset-item>
+  			  <img id="sky" src="sky.jpg">
+			 
+		  </a-assets> 		
+			
+			
+			<a-camera id='maincamera'  movement-controls speed=10 position ="0 5 0" fov="30" near="5" >
+				
+			</a-camera>	
+			 <a-entity position="0 60 -120"  scale="0.3 0.3 0.3" gltf-model="#city"></a-entity>
+			
+				
+         	<a-entity id="" particle-system="preset: snow; color: #FFFFFF; particleCount: 5000; accelerationValue:0,0,0;"></a-entity>
+			
+			  <a-plane color="#6c6c6c" rotation="-90 0 0" height="1000" width="1000"></a-plane>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/0.3.16/peer.min.js"></script>
-	<script src="script.js"></script>
+		  
+		</a-scene>	
+	</div>
+	  
+	  
+	  <div id="videolist">
 
-<body >
-        <video id="localvideo"></video>
-	<video id="remotevideo"></video>
-</body>
+	  	<video id="yourVideo" autoplay muted playsinline></video>
+	  </div>
+	  
+	  
+    <br />
+    <button onclick="loadplayer()" type="button" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Call</button>
+	  
+    <button onclick="deb()" type="button" class="btn btn-primary btn-lg">Check</button>
+	<button onclick="remove()" type="button" class="btn btn-primary btn-lg">Remove all users</button>  
+	  
+	 <script src="https://rawgit.com/mayognaise/aframe-mouse-cursor-component/master/dist/aframe-mouse-cursor-component.min.js"></script>  
+	 
+	<script src="js/soundmeter.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/4.9.0/firebase.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

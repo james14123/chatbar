@@ -1,0 +1,45 @@
+# Blender MTL File: 'world.blend'
+# Material Count: 4
+
+newmtl metal
+Ns 49.019608
+Ka 0.000000 0.000000 0.000000
+Kd 0.470600 0.470600 0.470600
+Ks 0.300000 0.300000 0.300000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+refl /Users/James/Desktop/喇叭/Map__1_Raytrace.tga
+
+newmtl plastic
+Ns 49.019608
+Ka 0.050000 0.050000 0.050000
+Kd 0.858800 0.858800 0.858800
+Ks 0.150000 0.150000 0.150000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+refl /Users/James/Desktop/喇叭/Map__3_Raytrace.tga
+
+newmtl plastic_dark
+Ns 49.019608
+Ka 0.050000 0.050000 0.050000
+Kd 0.419600 0.419600 0.419600
+Ks 0.150000 0.150000 0.150000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
+refl /Users/James/Desktop/喇叭/Map__5_Raytrace.tga
+
+newmtl wire
+Ns 49.019608
+Ka 0.150000 0.150000 0.150000
+Kd 0.125500 0.125500 0.125500
+Ks 0.200000 0.200000 0.200000
+Ke 0.000000 0.000000 0.000000
+Ni 1.500000
+d 1.000000
+illum 2
